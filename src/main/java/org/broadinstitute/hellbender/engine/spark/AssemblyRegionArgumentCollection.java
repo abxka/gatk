@@ -18,6 +18,7 @@ public class AssemblyRegionArgumentCollection implements Serializable {
     public static final String MAX_STARTS_LONG_NAME = "max-reads-per-alignment-start";
     public static final String THRESHOLD_LONG_NAME = "active-probability-threshold";
     public static final String PROPAGATION_LONG_NAME = "max-prob-propagation-distance";
+    public static final String DONT_TRIM_LONG_NAME = "dont-trim-active-regions";
 
     public static final int DEFAULT_MIN_ASSEMBLY_REGION_SIZE = 50;
     public static final int DEFAULT_MAX_ASSEMBLY_REGION_SIZE = 300;

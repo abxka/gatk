@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import org.broadinstitute.barclay.argparser.Advanced;
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.Hidden;
+import org.broadinstitute.hellbender.engine.spark.AssemblyRegionArgumentCollection;
 import org.broadinstitute.hellbender.tools.walkers.haplotypecaller.readthreading.ReadThreadingAssembler;
 import org.broadinstitute.hellbender.utils.MathUtils;
 
@@ -27,6 +28,10 @@ public abstract class ReadThreadingAssemblerArgumentCollection implements Serial
     // -----------------------------------------------------------------------------------------------
     // arguments to control internal behavior of the read threading assembler
     // -----------------------------------------------------------------------------------------------
+
+    @Advanced
+    @Argument(fullName= AssemblyRegionArgumentCollection.DONT_TRIM_LONG_NAME, doc="If specified, we will not trim down the active region from the full region (active + extension) to just the active interval for genotyping", optional = true)
+    protected boolean dontTrimActiveRegions = false;
 
     /**
      * Multiple kmer sizes can be specified, using e.g. `--kmer-size 10 --kmer-size 25`.
