@@ -29,10 +29,6 @@ public abstract class ReadThreadingAssemblerArgumentCollection implements Serial
     // arguments to control internal behavior of the read threading assembler
     // -----------------------------------------------------------------------------------------------
 
-    @Advanced
-    @Argument(fullName= AssemblyRegionArgumentCollection.DONT_TRIM_LONG_NAME, doc="If specified, we will not trim down the active region from the full region (active + extension) to just the active interval for genotyping", optional = true)
-    protected boolean dontTrimActiveRegions = false;
-
     /**
      * Multiple kmer sizes can be specified, using e.g. `--kmer-size 10 --kmer-size 25`.
      */
